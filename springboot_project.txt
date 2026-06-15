@@ -1,0 +1,1169 @@
+﻿
+
+==================== FILE: D:\projectjava\QuanLyVoucher\.idea\compiler.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for Domain" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="Domain" />
+        <module name="QuanLyVoucher" />
+      </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="presentation" />
+        <module name="Application" />
+        <module name="infrastructure" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Application" options="-parameters" />
+      <module name="Domain" options="-parameters" />
+      <module name="QuanLyVoucher" options="-parameters" />
+      <module name="infrastructure" options="-parameters" />
+      <module name="presentation" options="-parameters" />
+    </option>
+  </component>
+</project>
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\.idea\encodings.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/infrastructure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/presentation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+  </component>
+</project>
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\.idea\jarRepositories.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+  </component>
+</project>
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\.idea\misc.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Domain/pom.xml" />
+        <option value="$PROJECT_DIR$/Application/pom.xml" />
+        <option value="$PROJECT_DIR$/infrastructure/pom.xml" />
+        <option value="$PROJECT_DIR$/presentation/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="temurin-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\.idea\workspace.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="35d21405-0d87-466e-8b0a-6f5a96eda311" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0080880072181149" />
+      <entry key="MS500" value="1.3851642717194168" />
+      <entry key="S2" value="2.0325353837157834" />
+      <entry key="S5" value="2.59204027344786" />
+      <entry key="S10" value="3.184176676289886" />
+      <entry key="S30" value="4.207112867853358" />
+      <entry key="S60" value="4.861775929971761" />
+      <entry key="M2" value="6.152180165868871" />
+      <entry key="M5" value="13.441711278699406" />
+      <entry key="M10" value="29.330614007772436" />
+      <entry key="M15" value="44.6168492614827" />
+      <entry key="M30" value="76.94050827244988" />
+      <entry key="H1" value="106.56767334109773" />
+      <entry key="H2" value="127.12868602054674" />
+      <entry key="H4" value="139.31428670659128" />
+      <entry key="D1" value="150.60658567783418" />
+      <entry key="W1" value="152.65521421218128" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.8705942580702797E-7" />
+      <entry key="MS500" value="0.04536368346575657" />
+      <entry key="S2" value="0.6292879016493339" />
+      <entry key="S5" value="1.8457758119652783" />
+      <entry key="S10" value="3.7336457325499453" />
+      <entry key="S30" value="8.257942145740753" />
+      <entry key="S60" value="11.638997889025832" />
+      <entry key="M2" value="16.426017073028188" />
+      <entry key="M5" value="33.11030468502706" />
+      <entry key="M10" value="58.94705417182537" />
+      <entry key="M15" value="78.6398361394202" />
+      <entry key="M30" value="113.92471715008554" />
+      <entry key="H1" value="142.8279071835009" />
+      <entry key="H2" value="161.85369387316678" />
+      <entry key="H4" value="172.8497508321977" />
+      <entry key="D1" value="182.88886973160962" />
+      <entry key="W1" value="184.69621924440338" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.043435073056010146" />
+      <entry key="MS500" value="0.8083781466765748" />
+      <entry key="S2" value="2.2097022859247475" />
+      <entry key="S5" value="4.020019131581515" />
+      <entry key="S10" value="6.511606066826208" />
+      <entry key="S30" value="12.153977547899355" />
+      <entry key="S60" value="16.275704759283702" />
+      <entry key="M2" value="22.414612433653463" />
+      <entry key="M5" value="46.41795050693819" />
+      <entry key="M10" value="88.15833007086324" />
+      <entry key="M15" value="123.15116255950493" />
+      <entry key="M30" value="190.79002528135874" />
+      <entry key="H1" value="249.3491216997445" />
+      <entry key="H2" value="288.95629917496876" />
+      <entry key="H4" value="312.1501830887103" />
+      <entry key="D1" value="333.4930234071776" />
+      <entry key="W1" value="337.3510828791016" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3F9ZJOUzWi2cfY2HHzyb4ygyvFq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35d21405-0d87-466e-8b0a-6f5a96eda311" name="Changes" comment="" />
+      <created>1781489177501</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781489177501</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\.mvn\wrapper\maven-wrapper.properties ====================
+
+wrapperVersion=3.3.4
+distributionType=only-script
+distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Application\.mvn\wrapper\maven-wrapper.properties ====================
+
+wrapperVersion=3.3.4
+distributionType=only-script
+distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Application\src\main\resources\application.properties ====================
+
+spring.application.name=Application
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Application\pom.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.example</groupId>
+        <artifactId>QuanLyVoucher</artifactId> <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>Application</artifactId>
+    <name>Application</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>Domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId> </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Domain\.mvn\wrapper\maven-wrapper.properties ====================
+
+wrapperVersion=3.3.4
+distributionType=only-script
+distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Domain\src\main\java\com\example\domain\entity\user.java ====================
+
+package com.example.domain.entity;
+
+import java.time.LocalDateTime;
+
+public class user {
+    private Integer id;
+    private String fullname;
+    private  String email;
+    private  String phone;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return CreatedAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        CreatedAt = createdAt;
+    }
+
+    private LocalDateTime CreatedAt;
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Domain\src\main\java\com\example\domain\entity\voucher.java ====================
+
+package com.example.domain.entity;
+
+
+import java.time.LocalDateTime;
+import java.util.Date;
+
+public class voucher {
+    private  Integer id;
+    private  String code;
+    private int discout_percent;
+    private  int quantity;
+    private Date expired_date;
+    private String status;
+    private LocalDateTime Created_At;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public int getDiscout_percent() {
+        return discout_percent;
+    }
+
+    public void setDiscout_percent(int discout_percent) {
+        this.discout_percent = discout_percent;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Date getExpired_date() {
+        return expired_date;
+    }
+
+    public void setExpired_date(Date expired_date) {
+        this.expired_date = expired_date;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getCreated_At() {
+        return Created_At;
+    }
+
+    public void setCreated_At(LocalDateTime created_At) {
+        Created_At = created_At;
+    }
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Domain\src\main\java\com\example\domain\entity\voucher_usage.java ====================
+
+package com.example.domain.entity;
+
+import java.time.LocalDateTime;
+
+public class voucher_usage {
+    private Integer id;
+    private Integer user_id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
+    }
+
+    public Integer getVoucher_id() {
+        return voucher_id;
+    }
+
+    public void setVoucher_id(Integer voucher_id) {
+        this.voucher_id = voucher_id;
+    }
+
+    public LocalDateTime getUsed_at() {
+        return used_at;
+    }
+
+    public void setUsed_at(LocalDateTime used_at) {
+        this.used_at = used_at;
+    }
+
+    private Integer voucher_id;
+    private LocalDateTime used_at;
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Domain\src\main\java\com\example\domain\repository\userRepo.java ====================
+
+package com.example.domain.repository;
+
+import com.example.domain.entity.user;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface userRepo {
+    List<user> GetAll();
+    Optional<user> findById(Integer id);
+    user Save(user u);
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Domain\src\main\java\com\example\domain\repository\voucherRepo.java ====================
+
+package com.example.domain.repository;
+
+import com.example.domain.entity.voucher;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface voucherRepo {
+    List<voucher> GetAll();
+    Optional<voucher> findById(Integer id);
+    Optional<voucher> findByCode(String code);
+    voucher save(voucher vc);
+    void update(Integer id,voucher vc);
+    void delete(voucher vc);
+
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Domain\src\main\java\com\example\domain\repository\voucher_usageRepo.java ====================
+
+package com.example.domain.repository;
+
+import com.example.domain.entity.user;
+import com.example.domain.entity.voucher_usage;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface voucher_usageRepo {
+    List<voucher_usage> GetAll();
+    Optional<voucher_usage> findById(Integer id);
+    voucher_usage Save(voucher_usage u);
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Domain\src\main\resources\application.properties ====================
+
+spring.application.name=Domain
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\Domain\pom.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.example</groupId>
+        <artifactId>QuanLyVoucher</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>Domain</artifactId>
+    <name>Domain</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\.mvn\wrapper\maven-wrapper.properties ====================
+
+wrapperVersion=3.3.4
+distributionType=only-script
+distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\adapter\UserRepoJpaIml.java ====================
+
+package com.example.infrastructure.adapter;
+
+import com.example.domain.entity.user;
+import com.example.domain.repository.userRepo;
+import com.example.infrastructure.Repositories.UserJpaRepository;
+import com.example.infrastructure.mapper.UserMapper;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public class UserRepoJpaIml implements userRepo {
+    private final UserJpaRepository repo;
+    public UserRepoJpaIml(UserJpaRepository repo)
+    {
+        this.repo=repo;
+    }
+    @Override
+    public List<user> GetAll() {
+        return repo.findAll().stream().map(UserMapper::toDomain).toList();
+    }
+
+    @Override
+    public Optional<user> findById(Integer id) {
+        return repo.findById(id).map(UserMapper::toDomain);
+    }
+
+    @Override
+    public user Save(user u) {
+        return UserMapper.toDomain(repo.save(UserMapper.toJpa(u)));
+    }
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\adapter\VoucherRepoJpaIml.java ====================
+
+package com.example.infrastructure.adapter;
+
+import com.example.domain.entity.voucher;
+import com.example.domain.repository.voucherRepo;
+import com.example.infrastructure.Repositories.VoucherJpaRepository;
+import com.example.infrastructure.mapper.VoucherMapper;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public class VoucherRepoJpaIml implements voucherRepo {
+    private final VoucherJpaRepository repo;
+
+    public VoucherRepoJpaIml(VoucherJpaRepository repo)
+    {
+        this.repo=repo;
+    }
+
+    @Override
+    public List<voucher> GetAll() {
+        return repo.findAll().stream().map(VoucherMapper::toDomain).toList();
+    }
+
+    @Override
+    public Optional<voucher> findById(Integer id) {
+        return repo.findById(id).map(VoucherMapper::toDomain);
+    }
+
+    @Override
+    public Optional<voucher> findByCode(String code) {
+        return repo.findByCode(code).map(VoucherMapper::toDomain);
+    }
+
+    @Override
+    public voucher save(voucher vc) {
+        return VoucherMapper.toDomain(repo.save(VoucherMapper.toJpa(vc)));
+    }
+
+    @Override
+    public void update(Integer id, voucher vc) {
+        vc.setId(id);
+        save(vc);
+
+    }
+
+    @Override
+    public void delete(voucher vc) {
+repo.deleteById(vc.getId());
+    }
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\adapter\VoucherUsageRepoJpaIml.java ====================
+
+package com.example.infrastructure.adapter;
+
+import com.example.domain.entity.voucher_usage;
+import com.example.domain.repository.voucher_usageRepo;
+import com.example.infrastructure.Repositories.VoucherJpaRepository;
+import com.example.infrastructure.Repositories.VoucherUsageJpaRepository;
+import com.example.infrastructure.mapper.Voucher_UsageMapper;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+@Repository
+public class VoucherUsageRepoJpaIml implements voucher_usageRepo {
+    private final VoucherUsageJpaRepository repo;
+
+    public VoucherUsageRepoJpaIml(VoucherUsageJpaRepository repo)
+    {
+        this.repo=repo;
+    }
+
+    @Override
+    public List<voucher_usage> GetAll() {
+        return repo.findAll().stream().map(Voucher_UsageMapper::toDomain).toList();
+    }
+
+    @Override
+    public Optional<voucher_usage> findById(Integer id) {
+        return repo.findById(id).map(Voucher_UsageMapper::toDomain);
+    }
+
+    @Override
+    public voucher_usage Save(voucher_usage u) {
+        return Voucher_UsageMapper.toDomain(repo.save(Voucher_UsageMapper.toJpa(u)));
+    }
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\jpa\UserJpaEntity.java ====================
+
+package com.example.infrastructure.jpa;
+
+import jakarta.persistence.*;
+import lombok.*;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "users")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class UserJpaEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(name = "full_name", nullable = false)
+    private String fullName;
+
+    @Column(unique = true, nullable = false)
+    private String email;
+
+    @Column(length = 20)
+    private String phone;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\jpa\VoucherJpaEntity.java ====================
+
+package com.example.infrastructure.jpa;
+
+import jakarta.persistence.*;
+import lombok.*;
+import java.time.LocalDateTime;
+import java.util.Date;
+
+@Entity
+@Table(name = "vouchers")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class VoucherJpaEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(unique = true, nullable = false, length = 50)
+    private String code;
+
+    @Column(name = "discount_percent", nullable = false)
+    private int discountPercent;
+
+    @Column(nullable = false)
+    private int quantity;
+
+    @Column(name = "expired_date", nullable = false)
+    @Temporal(TemporalType.DATE)
+    private Date expiredDate;
+
+    @Column(nullable = false, length = 20)
+    private String status;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\jpa\VoucherUsageJpaEntity.java ====================
+
+package com.example.infrastructure.jpa;
+
+import jakarta.persistence.*;
+import lombok.*;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "user_vouchers")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class VoucherUsageJpaEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(name = "user_id", nullable = false)
+    private Integer userId;
+
+    @Column(name = "voucher_id", nullable = false)
+    private Integer voucherId;
+
+    @Column(name = "used_at")
+    private LocalDateTime usedAt;
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\mapper\UserMapper.java ====================
+
+package com.example.infrastructure.mapper;
+
+import com.example.domain.entity.user;
+import com.example.infrastructure.jpa.UserJpaEntity;
+import org.springframework.stereotype.Component;
+
+@Component
+public class UserMapper {
+    public static user toDomain(UserJpaEntity entity) {
+        if (entity == null) {
+            return null;
+        }
+
+        user d = new user();
+        d.setId(entity.getId());
+        d.setFullname(entity.getFullName()); // Ãnh xáº¡ tá»« fullName (JPA) sang fullname (Domain)
+        d.setEmail(entity.getEmail());
+        d.setPhone(entity.getPhone());
+        d.setCreatedAt(entity.getCreatedAt());
+        return d;
+    }
+
+    public static UserJpaEntity toJpa(user domain) {
+        if (domain == null) {
+            return null;
+        }
+
+        UserJpaEntity d = new UserJpaEntity();
+        d.setId(domain.getId());
+        d.setFullName(domain.getFullname());
+        d.setEmail(domain.getEmail());
+        d.setPhone(domain.getPhone());
+        d.setCreatedAt(domain.getCreatedAt());
+        return d;
+    }
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\mapper\VoucherMapper.java ====================
+
+package com.example.infrastructure.mapper;
+
+import com.example.domain.entity.voucher;
+import com.example.infrastructure.jpa.VoucherJpaEntity;
+import org.springframework.stereotype.Component;
+
+@Component
+public class VoucherMapper {
+    public static voucher toDomain(VoucherJpaEntity entity) {
+        if (entity == null) {
+            return null;
+        }
+
+        voucher d = new voucher();
+        d.setId(entity.getId());
+        d.setCode(entity.getCode());
+        d.setDiscout_percent(entity.getDiscountPercent()); // ChÃº Ã½ map Ä‘Ãºng tÃªn biáº¿n domain
+        d.setQuantity(entity.getQuantity());
+        d.setExpired_date(entity.getExpiredDate());
+        d.setStatus(entity.getStatus());
+        d.setCreated_At(entity.getCreatedAt());
+        return d;
+    }
+    public static VoucherJpaEntity toJpa(voucher domain) {
+        if (domain == null) {
+            return null;
+        }
+
+        VoucherJpaEntity d = new VoucherJpaEntity();
+        d.setId(domain.getId());
+        d.setCode(domain.getCode());
+        d.setDiscountPercent(domain.getDiscout_percent());
+        d.setQuantity(domain.getQuantity());
+        d.setExpiredDate(domain.getExpired_date());
+        d.setStatus(domain.getStatus());
+        d.setCreatedAt(domain.getCreated_At());
+        return d;
+    }
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\mapper\Voucher_UsageMapper.java ====================
+
+package com.example.infrastructure.mapper;
+
+import com.example.domain.entity.voucher_usage;
+import com.example.infrastructure.jpa.VoucherUsageJpaEntity;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Voucher_UsageMapper {
+        public static voucher_usage toDomain(VoucherUsageJpaEntity entity) {
+            if (entity == null) {
+                return null;
+            }
+
+            voucher_usage d = new voucher_usage();
+            d.setId(entity.getId());
+            d.setUser_id(entity.getUserId()); // Ãnh xáº¡ tá»« userId (JPA) sang user_id (Domain)
+            d.setVoucher_id(entity.getVoucherId());
+            d.setUsed_at(entity.getUsedAt());
+            return d;
+        }
+
+        public static VoucherUsageJpaEntity toJpa(voucher_usage domain) {
+            if (domain == null) {
+                return null;
+            }
+
+            VoucherUsageJpaEntity d = new VoucherUsageJpaEntity();
+            d.setId(domain.getId());
+            d.setUserId(domain.getUser_id());
+            d.setVoucherId(domain.getVoucher_id());
+            d.setUsedAt(domain.getUsed_at());
+            return d;
+        }
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\Repositories\UserJpaRepository.java ====================
+
+package com.example.infrastructure.Repositories;
+import com.example.infrastructure.jpa.UserJpaEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserJpaRepository extends JpaRepository<UserJpaEntity, Integer> {
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\Repositories\VoucherJpaRepository.java ====================
+
+package com.example.infrastructure.Repositories;
+
+import com.example.infrastructure.jpa.VoucherJpaEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface VoucherJpaRepository extends JpaRepository<VoucherJpaEntity,Integer> {
+    Optional<VoucherJpaEntity> findByCode(String code);
+
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\java\com\example\infrastructure\Repositories\VoucherUsageJpaRepository.java ====================
+
+package com.example.infrastructure.Repositories;
+
+import com.example.infrastructure.jpa.VoucherUsageJpaEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface VoucherUsageJpaRepository extends JpaRepository<VoucherUsageJpaEntity,Integer> {
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\src\main\resources\application.properties ====================
+
+spring.application.name=infrastructure
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\infrastructure\pom.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.example</groupId>
+        <artifactId>QuanLyVoucher</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>infrastructure</artifactId>
+    <name>infrastructure</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>Application</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+        </dependency>
+    </dependencies>
+</project>
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\presentation\.mvn\wrapper\maven-wrapper.properties ====================
+
+wrapperVersion=3.3.4
+distributionType=only-script
+distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\presentation\src\main\java\com\example\presentation\PresentationApplication.java ====================
+
+package com.example.presentation;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PresentationApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(PresentationApplication.class, args);
+    }
+
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\presentation\src\main\resources\application.properties ====================
+
+spring.application.name=presentation
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\presentation\src\test\java\com\example\presentation\PresentationApplicationTests.java ====================
+
+package com.example.presentation;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class PresentationApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\presentation\pom.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.example</groupId>
+        <artifactId>QuanLyVoucher</artifactId> <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>presentation</artifactId>
+    <name>presentation</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>infrastructure</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId> </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+
+==================== FILE: D:\projectjava\QuanLyVoucher\pom.xml ====================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.0</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.example</groupId>
+    <artifactId>QuanLyVoucher</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging> <name>QuanLyVoucher</name>
+    <description>QuanLyVoucher Root</description>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <modules>
+        <module>Domain</module>
+        <module>Application</module>
+        <module>infrastructure</module>
+        <module>presentation</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
