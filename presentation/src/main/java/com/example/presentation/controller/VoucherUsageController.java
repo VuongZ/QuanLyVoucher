@@ -1,5 +1,6 @@
 package com.example.presentation.controller;
 
+import com.example.application.common.ApiResponse;
 import com.example.application.common.PageResult;
 import com.example.application.dto.VoucherUsageDto;
 import com.example.application.dto.VoucherUsageRequest;
@@ -18,19 +19,19 @@ public class VoucherUsageController {
     }
 
     @GetMapping
-    public ResponseEntity<PageResult<VoucherUsageDto>> getAll(
+    public ResponseEntity<ApiResponse<PageResult<VoucherUsageDto>>> getAll(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
-        return ResponseEntity.ok(voucherUsageService.getAll(page, size));
+        return ResponseEntity.ok(ApiResponse.success("Lấy danh sách lịch sử thành công", voucherUsageService.getAll(page, size)));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<VoucherUsageDto> getById(@PathVariable Integer id) {
-        return ResponseEntity.ok(voucherUsageService.getById(id));
+    public ResponseEntity<ApiResponse<VoucherUsageDto>> getById(@PathVariable Integer id) {
+        return ResponseEntity.ok(ApiResponse.success("Lấy lịch sử thành công", voucherUsageService.getById(id)));
     }
 
     @PostMapping
-    public ResponseEntity<VoucherUsageDto> create(@RequestBody VoucherUsageRequest request) {
-        return ResponseEntity.status(201).body(voucherUsageService.create(request));
+    public ResponseEntity<ApiResponse<VoucherUsageDto>> create(@RequestBody VoucherUsageRequest request) {
+        return ResponseEntity.status(201).body(ApiResponse.success("Sử dụng voucher thành công", voucherUsageService.create(request)));
     }
 }

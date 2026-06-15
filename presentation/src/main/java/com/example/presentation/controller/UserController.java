@@ -1,5 +1,6 @@
 package com.example.presentation.controller;
 
+import com.example.application.common.ApiResponse;
 import com.example.application.common.PageResult;
 import com.example.application.dto.UserDto;
 import com.example.application.dto.UserRequest;
@@ -19,19 +20,19 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<PageResult<UserDto>> getAll(
+    public ResponseEntity<ApiResponse<PageResult<UserDto>>> getAll(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
-        return ResponseEntity.ok(userService.getAll(page, size));
+        return ResponseEntity.ok(ApiResponse.success("Lấy danh sách user thành công", userService.getAll(page, size)));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDto> getById( @PathVariable Integer id) {
-        return ResponseEntity.ok(userService.getById(id));
+    public ResponseEntity<ApiResponse<UserDto>> getById(@PathVariable Integer id) {
+        return ResponseEntity.ok(ApiResponse.success("Lấy user thành công", userService.getById(id)));
     }
 
     @PostMapping
-    public ResponseEntity<UserDto> create(@Valid  @RequestBody UserRequest request) {
-        return ResponseEntity.status(201).body(userService.create(request));
+    public ResponseEntity<ApiResponse<UserDto>> create(@Valid @RequestBody UserRequest request) {
+        return ResponseEntity.status(201).body(ApiResponse.success("Tạo user thành công", userService.create(request)));
     }
 }

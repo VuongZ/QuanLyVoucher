@@ -1,6 +1,6 @@
 package com.example.presentation.controller;
 
-
+import com.example.application.common.ApiResponse;
 import com.example.application.common.PageResult;
 import com.example.application.dto.VoucherDto;
 import com.example.application.dto.VoucherRequest;
@@ -20,37 +20,37 @@ public class VoucherController {
     }
 
     @GetMapping
-    public ResponseEntity<PageResult<VoucherDto>> getAll(
+    public ResponseEntity<ApiResponse<PageResult<VoucherDto>>> getAll(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
-        return ResponseEntity.ok(voucherService.getAll(page, size));
+        return ResponseEntity.ok(ApiResponse.success("Lấy danh sách voucher thành công", voucherService.getAll(page, size)));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<VoucherDto> getById(@PathVariable Integer id) {
-        return ResponseEntity.ok(voucherService.getById(id));
+    public ResponseEntity<ApiResponse<VoucherDto>> getById(@PathVariable Integer id) {
+        return ResponseEntity.ok(ApiResponse.success("Lấy voucher thành công", voucherService.getById(id)));
     }
 
     @GetMapping("/code/{code}")
-    public ResponseEntity<VoucherDto> getByCode(@PathVariable String code) {
-        return ResponseEntity.ok(voucherService.getByCode(code));
+    public ResponseEntity<ApiResponse<VoucherDto>> getByCode(@PathVariable String code) {
+        return ResponseEntity.ok(ApiResponse.success("Lấy voucher thành công", voucherService.getByCode(code)));
     }
 
     @PostMapping
-    public ResponseEntity<VoucherDto> create (@Valid @RequestBody  VoucherRequest request) {
-        return ResponseEntity.status(201).body(voucherService.create(request));
+    public ResponseEntity<ApiResponse<VoucherDto>> create(@Valid @RequestBody VoucherRequest request) {
+        return ResponseEntity.status(201).body(ApiResponse.success("Tạo voucher thành công", voucherService.create(request)));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<VoucherDto> update(
+    public ResponseEntity<ApiResponse<VoucherDto>> update(
             @PathVariable Integer id,
-            @RequestBody VoucherRequest request) {
-        return ResponseEntity.ok(voucherService.update(id, request));
+            @Valid @RequestBody VoucherRequest request) {
+        return ResponseEntity.ok(ApiResponse.success("Cập nhật voucher thành công", voucherService.update(id, request)));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@Valid  @PathVariable Integer id) {
+    public ResponseEntity<ApiResponse<Void>> delete(@PathVariable Integer id) {
         voucherService.delete(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok(ApiResponse.success("Xóa voucher thành công"));
     }
 }
