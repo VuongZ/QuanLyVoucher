@@ -34,4 +34,8 @@ public class VoucherJpaEntity {
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
+    @Column(name = "is_deleted")
+    private boolean IsDeleted;
+    @Column(name = "deleted_at")
+    private LocalDateTime DeletedAt;
 }

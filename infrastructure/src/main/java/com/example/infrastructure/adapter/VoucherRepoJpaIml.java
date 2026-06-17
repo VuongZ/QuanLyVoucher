@@ -20,7 +20,7 @@ public class VoucherRepoJpaIml implements voucherRepo {
 
     @Override
     public List<voucher> GetAll() {
-        return repo.findAll().stream().map(VoucherMapper::toDomain).toList();
+        return repo.findAll().stream().map(VoucherMapper::toDomain).filter(vc-> !vc.isIs_deleted()).toList();
     }
 
     @Override
@@ -47,6 +47,9 @@ public class VoucherRepoJpaIml implements voucherRepo {
 
     @Override
     public void delete(voucher vc) {
-repo.deleteById(vc.getId());
+        vc= repo.findById(vc.getId()).map(VoucherMapper::toDomain).orElseThrow(()-> new RuntimeException("Voucher Khong Ton Tai"));
+        vc.setIs_deleted(true);
+        vc.setDeleted_at(java.time.LocalDateTime.now());
+        repo.save(VoucherMapper.toJpa(vc));
     }
 }

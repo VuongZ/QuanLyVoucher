@@ -12,6 +12,24 @@ public class voucher {
     private Date expired_date;
     private String status;
     private LocalDateTime Created_At;
+    private boolean is_deleted;
+    private LocalDateTime deleted_at;
+
+    public boolean isIs_deleted() {
+        return is_deleted;
+    }
+
+    public void setIs_deleted(boolean is_deleted) {
+        this.is_deleted = is_deleted;
+    }
+
+    public LocalDateTime getDeleted_at() {
+        return deleted_at;
+    }
+
+    public void setDeleted_at(LocalDateTime deleted_at) {
+        this.deleted_at = deleted_at;
+    }
 
     public Integer getId() {
         return id;

@@ -19,6 +19,8 @@ public class VoucherMapper {
         d.setExpired_date(entity.getExpiredDate());
         d.setStatus(entity.getStatus());
         d.setCreated_At(entity.getCreatedAt());
+        d.setIs_deleted(entity.isIsDeleted());
+        d.setDeleted_at(entity.getDeletedAt());
         return d;
     }
     public static VoucherJpaEntity toJpa(voucher domain) {
@@ -34,6 +36,8 @@ public class VoucherMapper {
         d.setExpiredDate(domain.getExpired_date());
         d.setStatus(domain.getStatus());
         d.setCreatedAt(domain.getCreated_At());
+        d.setIsDeleted(domain.isIs_deleted());
+        d.setDeletedAt(domain.getDeleted_at());
         return d;
     }
 }
