@@ -20,7 +20,7 @@ public class VoucherRequest {
     private Date expiredDate;
 
     @NotBlank(message = "Status không được để trống")
-    private String status;
+            private String status;
 
     // Getters & Setters
     public String getCode() { return code; }
