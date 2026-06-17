@@ -12,8 +12,10 @@ Hệ thống **Quản Lý Voucher** được xây dựng bằng **Spring Boot 4.
 - [Cài Đặt & Chạy Dự Án](#-cài-đặt--chạy-dự-án)
 - [Cấu Hình Database](#-cấu-hình-database)
 - [Cấu Trúc Database](#-cấu-trúc-database)
+- [Swagger UI](#-swagger-ui)
 - [API Endpoints](#-api-endpoints)
 - [Mô Hình Dữ Liệu](#-mô-hình-dữ-liệu)
+- [Xóa Mềm Voucher](#-xóa-mềm-voucher)
 - [Công Nghệ Sử Dụng](#-công-nghệ-sử-dụng)
 
 ---
@@ -136,7 +138,7 @@ spring.datasource.password=your_password
 spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 # JPA / Hibernate
-spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.ddl-auto=none
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.database-platform=org.hibernate.dialect.SQLServerDialect
@@ -175,6 +177,18 @@ Hoặc trong IntelliJ IDEA: chạy class `PresentationApplication.java` trong mo
 
 Ứng dụng khởi động tại: **http://localhost:8080**
 
+Swagger UI dùng để test API trực tiếp tại:
+
+```text
+http://localhost:8080/swagger-ui/index.html
+```
+
+Nếu đổi port sang `8081`, Swagger UI sẽ là:
+
+```text
+http://localhost:8081/swagger-ui/index.html
+```
+
 ---
 
 ## 🗄️ Cấu Hình Database
@@ -203,7 +217,9 @@ CREATE TABLE vouchers (
     quantity         INT           NOT NULL,
     expired_date     DATE          NOT NULL,
     status           NVARCHAR(20)  NOT NULL,  -- 'ACTIVE' | 'INACTIVE'
-    created_at       DATETIME2
+    created_at       DATETIME2,
+    is_deleted       BIT           NOT NULL DEFAULT 0,
+    deleted_at       DATETIME2     NULL
 );
 
 CREATE TABLE user_vouchers (
@@ -214,6 +230,14 @@ CREATE TABLE user_vouchers (
     FOREIGN KEY (user_id)    REFERENCES users(id),
     FOREIGN KEY (voucher_id) REFERENCES vouchers(id)
 );
+```
+
+Nếu bảng `vouchers` đã tồn tại, chạy thêm query sau để hỗ trợ xóa mềm:
+
+```sql
+ALTER TABLE vouchers
+ADD is_deleted BIT NOT NULL DEFAULT 0,
+    deleted_at DATETIME2 NULL;
 ```
 
 ---
@@ -239,6 +263,8 @@ CREATE TABLE user_vouchers (
 | expired_date | DATE | Ngày hết hạn |
 | status | NVARCHAR(20) | Trạng thái: `ACTIVE` / `INACTIVE` |
 | created_at | DATETIME2 | Thời gian tạo |
+| is_deleted | BIT | Đánh dấu xóa mềm: `0` là chưa xóa, `1` là đã xóa |
+| deleted_at | DATETIME2 | Thời điểm xóa mềm, có thể `NULL` |
 
 ### Bảng `user_vouchers`
 | Cột | Kiểu | Mô tả |
@@ -247,6 +273,44 @@ CREATE TABLE user_vouchers (
 | user_id | INT (FK) | Tham chiếu đến `users.id` |
 | voucher_id | INT (FK) | Tham chiếu đến `vouchers.id` |
 | used_at | DATETIME2 | Thời điểm sử dụng |
+
+---
+
+## 🧭 Swagger UI
+
+Dự án sử dụng **springdoc-openapi** để tạo giao diện test API tự động.
+
+### Dependency Swagger
+
+Dependency Swagger được thêm trong file `presentation/pom.xml` vì đây là module chạy `Controller` và class `PresentationApplication`.
+
+```xml
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.6.0</version>
+</dependency>
+```
+
+Sau khi chạy ứng dụng, mở Swagger UI tại:
+
+```text
+http://localhost:8080/swagger-ui/index.html
+```
+
+API docs dạng JSON:
+
+```text
+http://localhost:8080/v3/api-docs
+```
+
+Nếu port trong `application.properties` là `8081`, đổi link thành:
+
+```text
+http://localhost:8081/swagger-ui/index.html
+```
+
+Swagger giúp test trực tiếp các API như `GET`, `POST`, `PUT`, `DELETE` mà không cần dùng Postman.
 
 ---
 
@@ -351,10 +415,19 @@ Content-Type: application/json
 }
 ```
 
-#### Xóa voucher
+#### Xóa mềm voucher
 ```
 DELETE /api/vouchers/{id}
 ```
+
+API này không xóa vật lý dữ liệu khỏi database. Hệ thống chỉ cập nhật:
+
+```sql
+is_deleted = 1,
+deleted_at = thời điểm hiện tại
+```
+
+Các API lấy danh sách hoặc tìm kiếm voucher nên chỉ trả về voucher có `is_deleted = 0`.
 
 ---
 
@@ -405,7 +478,53 @@ curl -X POST http://localhost:8080/api/voucher-usages \
 
 # Xem danh sách vouchers
 curl http://localhost:8080/api/vouchers
+
+# Xóa mềm voucher
+curl -X DELETE http://localhost:8080/api/vouchers/1
 ```
+
+---
+
+## 🧹 Xóa Mềm Voucher
+
+Chức năng xóa voucher được xử lý theo cơ chế **xóa mềm** thay vì xóa trực tiếp bản ghi khỏi database.
+
+### Nguyên tắc xử lý
+
+- Khi gọi API `DELETE /api/vouchers/{id}`, hệ thống không dùng `deleteById()` để xóa vật lý.
+- Voucher được cập nhật `is_deleted = true` và `deleted_at = LocalDateTime.now()`.
+- Các hàm lấy dữ liệu như `GetAll()`, `findById()` và `findByCode()` cần lọc bỏ voucher đã bị xóa mềm.
+
+Ví dụ xử lý trong repository adapter:
+
+```java
+@Override
+public void delete(voucher vc) {
+    voucher existing = repo.findById(vc.getId())
+            .map(VoucherMapper::toDomain)
+            .orElseThrow(() -> new RuntimeException("Voucher không tồn tại"));
+
+    existing.setIs_deleted(true);
+    existing.setDeleted_at(LocalDateTime.now());
+
+    repo.save(VoucherMapper.toJpa(existing));
+}
+```
+
+Ví dụ lọc danh sách voucher chưa xóa:
+
+```java
+@Override
+public List<voucher> GetAll() {
+    return repo.findAll()
+            .stream()
+            .map(VoucherMapper::toDomain)
+            .filter(vc -> !vc.getIs_deleted())
+            .toList();
+}
+```
+
+> Lưu ý: `VoucherMapper` cần map đầy đủ 2 trường `is_deleted` và `deleted_at` giữa Domain Entity và JPA Entity.
 
 ---
 
@@ -417,6 +536,7 @@ curl http://localhost:8080/api/vouchers
 | Spring Data JPA | 4.1.0 | ORM / Data access |
 | Spring Web | 4.1.0 | REST API |
 | Spring Validation | 4.1.0 | Validate request |
+| springdoc-openapi | 2.6.0 | Swagger UI / OpenAPI docs |
 | Hibernate | 7.4.1 | JPA implementation |
 | Lombok | 1.18.36 | Giảm boilerplate code |
 | SQL Server JDBC | 12.8.1 | Driver kết nối database |
@@ -430,4 +550,6 @@ curl http://localhost:8080/api/vouchers
 - Project sử dụng **Clean Architecture** nên Domain và Application layer hoàn toàn độc lập với framework/database.
 - File cấu hình `application.properties` chính nằm trong module `presentation/src/main/resources/`.
 - Application chạy qua class `com.example.presentation.PresentationApplication`.
+- Swagger UI chạy tại `/swagger-ui/index.html` sau khi ứng dụng khởi động.
+- Voucher sử dụng xóa mềm bằng `is_deleted` và `deleted_at`, không xóa vật lý dữ liệu.
 - Phân trang được xử lý thủ công trong Service layer (in-memory pagination). Với dataset lớn, nên chuyển sang dùng `Pageable` của Spring Data JPA.
